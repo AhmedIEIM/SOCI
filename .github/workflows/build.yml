@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main, master, develop, 'releases/**' ]
     paths-ignore:
-      - 'compile_commands/**'   # prevent CI loop when we commit compile_commands.json
+      - 'compile_commands/**'
   pull_request:
     types: [ opened, synchronize, reopened ]
 
@@ -17,16 +17,10 @@ jobs:
     runs-on: windows-latest
     defaults:
       run:
-        shell: msys2 {0}   # cmake/ninja come from /mingw64/bin
+        shell: msys2 {0}   # cmake/ninja from /mingw64/bin
 
-    # Read Sonar coordinates from Secrets first, then Repository Variables.
-    # SONAR_TOKEN must be in Secrets.
     env:
       BUILD_DIR: build
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SC_HOST: ${{ secrets.SONAR_HOST_URL || vars.SONAR_HOST_URL || 'https://sonarcloud.io' }}
-      SC_ORG:  ${{ secrets.SONAR_ORGANIZATION || vars.SONAR_ORGANIZATION }}
-      SC_KEY:  ${{ secrets.SONAR_PROJECT_KEY   || vars.SONAR_PROJECT_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -161,25 +155,16 @@ jobs:
           if ($LASTEXITCODE -ne 0) { git commit -m "[skip ci] update compile_commands.json ($env:TARGET_DIR)"; git push } else { Write-Host "No changes in compile_commands.json; nothing to commit." }
           exit 0
 
-      # --- Sanity check Sonar coordinates before scanning ---
-      - name: Check SonarCloud settings
-        shell: pwsh
-        run: |
-          if (-not "$env:SONAR_TOKEN") { Write-Error "SONAR_TOKEN secret is missing."; exit 1 }
-          if (-not "$env:SC_ORG")      { Write-Error "SONAR_ORGANIZATION is missing (set in Secrets or Repository Variables)."; exit 1 }
-          if (-not "$env:SC_KEY")      { Write-Error "SONAR_PROJECT_KEY is missing (set in Secrets or Repository Variables)."; exit 1 }
-          "Using SonarCloud: org='$env:SC_ORG' projectKey='$env:SC_KEY' host='$env:SC_HOST'"
-
-      # SonarCloud scan using compile_commands.json (no wrapper)
+      # SonarCloud scan using compile_commands.json
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v6
         env:
-          SONAR_TOKEN: ${{ env.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ env.SC_HOST }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL || 'https://sonarcloud.io' }}
         with:
           args: >
-            --define sonar.organization=${{ env.SC_ORG }}
-            --define sonar.projectKey=${{ env.SC_KEY }}
+            --define sonar.organization=${{ secrets.SONAR_ORGANIZATION }}
+            --define sonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             --define sonar.sources=.
             --define sonar.exclusions=**/tests/**,**/.scannerwork/**,**/${{ env.BUILD_DIR }}/**,**/scripts/**,**/cmake-build-**/
             --define sonar.cfamily.compile-commands=${{ env.BUILD_DIR }}/compile_commands.json
