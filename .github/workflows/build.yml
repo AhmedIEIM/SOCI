@@ -64,7 +64,7 @@ jobs:
       - name: Test (none expected)
         run: ctest --output-on-failure -C Release --test-dir "${BUILD_DIR}" || true
 
-      # --- Produce full & stripped bundles for Ghidra ---
+      # -- Produce full & stripped bundles for Ghidra --
       - name: Package (full + stripped + symbols)
         run: |
           set -euo pipefail
