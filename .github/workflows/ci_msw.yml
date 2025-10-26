@@ -1,82 +1,67 @@
-# Continuous integration workflow for SOCI Windows builds.
-name: Windows CI
+# Simplified Windows MSVC build that produces PDB-friendly artifacts for Ghidra.
+name: Windows CI (MSVC minimal)
 
 on:
   push:
-    branches:
-      - master
-      - 'release/**'
+    branches: [ master, 'release/**' ]
     paths-ignore:
-      - .circleci/**
-      - .cirrus.yml
-      - .github/workflows/ci.yml
-      - .github/workflows/codeql.yml
-      - appveyor.yml
+      - 'compile_commands/**'
   pull_request:
-    branches:
-      - master
-    paths-ignore:
-      - .circleci/**
-      - .cirrus.yml
-      - .github/workflows/ci.yml
-      - .github/workflows/codeql.yml
-      - appveyor.yml
+    branches: [ master ]
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - lib_type: shared
-            build_type: Debug
-          - lib_type: shared
-            build_type: Release
-            unity_build: true
-          - lib_type: static
-            build_type: Release
-
-    runs-on: windows-2022
-    name: MSVS ${{ matrix.lib_type }} ${{ matrix.build_type }} ${{ matrix.unity_build && '(unity build)' || '' }}
-
-    env:
-      SOCI_CI: true
+    runs-on: windows-latest
+    name: MSVC Debug (core + empty)
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: 'recursive'
+          submodules: recursive
 
-      - name: Set up MSVS environment
-        uses: seanmiddleditch/gha-setup-vsdevenv@v5
+      - name: MSVC dev command prompt
+        uses: ilammy/msvc-dev-cmd@v1
 
-      - name: Set up PostgreSQL
-        run: |
-          $pgService = Get-Service -Name postgresql*
-          Set-Service -InputObject $pgService -Status running -StartupType automatic
-          Start-Process -FilePath "$env:PGBIN\pg_isready" -Wait
-          & $env:PGBIN\createdb soci_test
-
-      - name: Configure
-        run: |
-          $soci_shared = "${{ matrix.lib_type }}" -eq "shared" ? "ON" : "OFF"
-          $soci_enable_unity_build = "${{ matrix.unity_build }}" ? "ON" : "OFF"
-          cmake -S . -B build -GNinja `
-            -DCMAKE_VERBOSE_MAKEFILE=ON `
-            -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} `
-            -DCMAKE_UNITY_BUILD=$soci_enable_unity_build `
-            -DWITH_BOOST=OFF `
-            -DSOCI_DB2=OFF `
-            -DSOCI_FIREBIRD=OFF `
-            -DSOCI_ORACLE=OFF `
-            -DSOCI_SHARED=$soci_shared `
-            -DSOCI_ENABLE_WERROR=ON
+      - name: Configure (VS2022, core + empty only)
+        shell: pwsh
+        run: >
+          cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+          -DCMAKE_BUILD_TYPE=Debug
+          -DWITH_BOOST=OFF
+          -DSOCI_TESTS=OFF
+          -DSOCI_SHARED=ON
+          -DSOCI_STATIC=ON
+          -DSOCI_EMPTY=ON
+          -DSOCI_SQLITE3=OFF
+          -DSOCI_DB2=OFF
+          -DSOCI_FIREBIRD=OFF
+          -DSOCI_ORACLE=OFF
+          -DSOCI_ODBC=OFF
+          -DSOCI_POSTGRESQL=OFF
+          -DSOCI_MYSQL=OFF
 
       - name: Build
-        run: |
-          cmake --build build
+        shell: pwsh
+        run: cmake --build build --config Debug -j2
 
-      - name: Test
+      - name: Package (full + PDBs)
+        shell: pwsh
         run: |
-          ctest --test-dir build -V --timeout 300 --output-on-failure --exclude-regex "soci_mysql_test|soci_odbc_test_.*"
+          New-Item -ItemType Directory -Force -Path out\full\bin,out\full\lib,out\full\include | Out-Null
+          if (Test-Path include) { Copy-Item -Recurse -Force include\* out\full\include\ }
+          Get-ChildItem -Recurse build -Include *.dll,*.exe | Copy-Item -Destination out\full\bin -Force
+          Get-ChildItem -Recurse build -Include *.lib | Where-Object { $_.Name -like "soci*.lib" } | Copy-Item -Destination out\full\lib -Force
+          # symbols (PDB)
+          New-Item -ItemType Directory -Force -Path out\symbols | Out-Null
+          Get-ChildItem -Recurse build -Include *.pdb | Copy-Item -Destination out\symbols -Force
+
+      - name: Upload artifact (full + pdb)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ghidra-full-windows-msvc-Debug
+          path: |
+            out/full/**
+            out/symbols/**
+          if-no-files-found: warn
+          retention-days: 30

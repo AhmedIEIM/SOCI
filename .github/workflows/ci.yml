@@ -12,6 +12,7 @@ on:
       - .github/workflows/ci_msw.yml
       - .github/workflows/codeql.yml
       - appveyor.yml
+      - 'compile_commands/**'
   pull_request:
     branches:
       - master
@@ -35,8 +36,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-            # Ubuntu jobs
-            # Can't test DB2 as required db2exc package is no longer available after Ubuntu 14.04
           - lib_type: shared
             backend: SQLite3
             runner: ubuntu-24.04
@@ -86,8 +85,6 @@ jobs:
           - lib_type: static
             backend: Empty
             runner: ubuntu-24.04
-
-            # MacOS jobs
           - lib_type: shared
             backend: Empty
             runner: macos-14
@@ -100,8 +97,6 @@ jobs:
             backend: SQLite3
             runner: macos-14
             no_boost: true
-
-            # Special
           - lib_type: shared
             backend: SQLite3
             runner: ubuntu-24.04
@@ -145,14 +140,9 @@ jobs:
       - name: Set environment variables
         shell: bash
         run: |
-          set_env_var() {
-            echo "Setting environment variable $1=$2"
-            echo $1=$2 >> $GITHUB_ENV
-          }
-
-          set_env_var SOCI_CI_BRANCH $GITHUB_REF
-          set_env_var SOCI_SOURCE_DIR $GITHUB_WORKSPACE
-
+          set_env_var() { echo "$1=$2" >> "$GITHUB_ENV"; }
+          set_env_var SOCI_CI_BRANCH "$GITHUB_REF"
+          set_env_var SOCI_SOURCE_DIR "$GITHUB_WORKSPACE"
           case "${{runner.os}}" in
             Linux)
               set_env_var PGHOST localhost
@@ -160,36 +150,17 @@ jobs:
               set_env_var PGUSER postgres
               set_env_var PGPASSWORD 'Password12!'
               ;;
-
             macOS)
               set_env_var PGDATA /opt/homebrew/var/postgresql@14
               ;;
           esac
-
-          if [ -n "${{matrix.cxxstd}}" ]; then
-            set_env_var SOCI_CXXSTD ${{matrix.cxxstd}}
-          fi
-          if [ "${{matrix.no_boost}}" = true ]; then
-            set_env_var WITH_BOOST OFF
-          fi
-          if [ "${{matrix.test_release_package}}" = true ]; then
-            set_env_var TEST_RELEASE_PACKAGE YES
-          fi
-          if [ "${{matrix.build_examples}}" = true ]; then
-            set_env_var BUILD_EXAMPLES YES
-          fi
-          if [ "${{matrix.lib_type}}" = "static" ]; then
-            set_env_var SOCI_BUILD_STATIC YES
-          fi
-          if [ "${{matrix.unity_build}}" = false ]; then
-            set_env_var SOCI_ENABLE_UNITY_BUILD ON
-          else
-            set_env_var SOCI_ENABLE_UNITY_BUILD OFF
-          fi
-          if [ "${{matrix.mariadb}}" = true ]; then
-            set_env_var SOCI_MYSQL_USE_MARIADB YES
-          fi
-          # Ensure SOCI_CI_BACKEND is always lowercase
+          [ -n "${{matrix.cxxstd}}" ] && set_env_var SOCI_CXXSTD ${{matrix.cxxstd}}
+          [ "${{matrix.no_boost}}" = true ] && set_env_var WITH_BOOST OFF
+          [ "${{matrix.test_release_package}}" = true ] && set_env_var TEST_RELEASE_PACKAGE YES
+          [ "${{matrix.build_examples}}" = true ] && set_env_var BUILD_EXAMPLES YES
+          [ "${{matrix.lib_type}}" = "static" ] && set_env_var SOCI_BUILD_STATIC YES
+          if [ "${{matrix.unity_build}}" = false ]; then set_env_var SOCI_ENABLE_UNITY_BUILD ON; else set_env_var SOCI_ENABLE_UNITY_BUILD OFF; fi
+          [ "${{matrix.mariadb}}" = true ] && set_env_var SOCI_MYSQL_USE_MARIADB YES
           set_env_var SOCI_CI_BACKEND "$( echo "$SOCI_CI_BACKEND" | tr '[:upper:]' '[:lower:]' )"
 
       - name: Setup tmate
