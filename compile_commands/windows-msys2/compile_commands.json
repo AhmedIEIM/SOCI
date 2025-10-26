@@ -1,0 +1,248 @@
+[
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\backend-loader.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\backend-loader.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/backend-loader.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/backend-loader.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\blob.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\blob.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/blob.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/blob.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\common.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\common.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/common.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/common.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\connection-parameters.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\connection-parameters.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/connection-parameters.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/connection-parameters.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\connection-pool.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\connection-pool.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/connection-pool.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/connection-pool.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\error.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\error.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/error.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/error.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\into-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\into-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/into-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/into-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\logger.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\logger.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/logger.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/logger.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\once-temp-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\once-temp-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/once-temp-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/once-temp-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\prepare-temp-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\prepare-temp-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/prepare-temp-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/prepare-temp-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\procedure.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\procedure.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/procedure.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/procedure.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\ref-counted-prepare-info.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\ref-counted-prepare-info.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/ref-counted-prepare-info.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/ref-counted-prepare-info.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\ref-counted-statement.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\ref-counted-statement.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/ref-counted-statement.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/ref-counted-statement.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\row.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\row.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/row.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/row.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\rowid.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\rowid.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/rowid.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/rowid.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\session.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\session.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/session.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/session.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\soci-simple.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\soci-simple.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/soci-simple.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/soci-simple.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\statement.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\statement.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/statement.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/statement.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\transaction.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\transaction.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/transaction.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/transaction.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\unicode.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\unicode.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/unicode.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/unicode.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\use-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\use-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/use-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/use-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DDEFAULT_BACKENDS_PATH=\"\\\"C:/Program Files (x86)/SOCI/lib\\\"\" -DNOMINMAX -DSOCI_DEBUG_POSTFIX=\\\"\\\" -DSOCI_LIB_PREFIX=\\\"libsoci_\\\" -DSOCI_LIB_SUFFIX=\\\".dll\\\" -DSOCI_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/include/soci -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\core\\CMakeFiles\\soci_core.dir\\values.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\core\\values.cpp",
+  "file": "D:/a/SOCI/SOCI/src/core/values.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/core/CMakeFiles/soci_core.dir/values.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\blob.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\blob.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/blob.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/blob.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\factory.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\factory.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/factory.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/factory.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\row-id.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\row-id.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/row-id.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/row-id.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\session.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\session.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/session.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/session.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\standard-into-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\standard-into-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/standard-into-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/standard-into-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\standard-use-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\standard-use-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/standard-use-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/standard-use-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\statement.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\statement.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/statement.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/statement.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\vector-into-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\vector-into-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/vector-into-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/vector-into-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_EMPTY_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\empty\\CMakeFiles\\soci_empty.dir\\vector-use-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\empty\\vector-use-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/empty/vector-use-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/empty/CMakeFiles/soci_empty.dir/vector-use-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\blob.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\blob.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/blob.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/blob.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\error.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\error.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/error.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/error.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\factory.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\factory.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/factory.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/factory.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\row-id.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\row-id.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/row-id.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/row-id.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\session.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\session.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/session.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/session.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\standard-into-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\standard-into-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/standard-into-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/standard-into-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\standard-use-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\standard-use-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/standard-use-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/standard-use-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\statement.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\statement.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/statement.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/statement.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\vector-into-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\vector-into-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/vector-into-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/vector-into-type.cpp.obj"
+},
+{
+  "directory": "D:/a/SOCI/SOCI/build",
+  "command": "D:\\a\\_temp\\msys64\\mingw64\\bin\\c++.exe -DNOMINMAX -DSOCI_SQLITE3_SOURCE -DWIN32_LEAN_AND_MEAN -ID:/a/SOCI/SOCI/include/private -ID:/a/SOCI/SOCI/include -ID:/a/SOCI/SOCI/build/include -O3 -DNDEBUG -std=c++14 -flto=auto -fno-fat-lto-objects -fvisibility=hidden -Wno-variadic-macros -pedantic -Wno-error=parentheses -Wall -Wextra -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Woverloaded-virtual -Wredundant-decls -Wno-long-long -o src\\backends\\sqlite3\\CMakeFiles\\soci_sqlite3.dir\\vector-use-type.cpp.obj -c D:\\a\\SOCI\\SOCI\\src\\backends\\sqlite3\\vector-use-type.cpp",
+  "file": "D:/a/SOCI/SOCI/src/backends/sqlite3/vector-use-type.cpp",
+  "output": "D:/a/SOCI/SOCI/build/src/backends/sqlite3/CMakeFiles/soci_sqlite3.dir/vector-use-type.cpp.obj"
+}
+]
