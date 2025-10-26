@@ -26,26 +26,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: false  # (kept from previous workflow)
+          submodules: recursive   # ensure built-in sqlite3 (and any other deps) are present
 
-      # (Kept from your previous file; harmless if googletest isn't used)
-      - name: Ensure googletest is present
-        shell: pwsh
-        run: |
-          git submodule sync --recursive
-          git -c protocol.version=2 submodule update --init --force --depth 1 --recursive --jobs 8
-          if (-not (Test-Path "$env:GITHUB_WORKSPACE\googletest\CMakeLists.txt")) {
-            Write-Host "Submodule missing; cloning googletest shallowly..."
-            if (Test-Path "$env:GITHUB_WORKSPACE\googletest") {
-              Remove-Item -Recurse -Force "$env:GITHUB_WORKSPACE\googletest"
-            }
-            git clone --depth 1 https://github.com/google/googletest.git "$env:GITHUB_WORKSPACE\googletest"
-          }
-          if (-not (Test-Path "$env:GITHUB_WORKSPACE\googletest\CMakeLists.txt")) {
-            Write-Error "googletest is still missing; aborting."
-          }
-
-      - name: Install MSYS2 toolchain
+      - name: Install MSYS2 toolchain + SQLite3
         uses: msys2/setup-msys2@v2
         with:
           update: true
@@ -55,20 +38,26 @@ jobs:
             mingw-w64-x86_64-cmake
             mingw-w64-x86_64-ninja
             mingw-w64-x86_64-binutils
+            mingw-w64-x86_64-sqlite3
+            mingw-w64-x86_64-pkgconf
 
+      # Configure for a lean build that always has SQLite3 and no Boost.
       - name: Configure (Ninja, export compile_commands.json)
         run: >
           cmake -S . -B "${BUILD_DIR}" -G Ninja
           -DCMAKE_BUILD_TYPE=Release
           -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-          -DSQLITECPP_BUILD_TESTS=ON
-          -DSQLITECPP_BUILD_EXAMPLES=ON
+          -DWITH_BOOST=OFF
+          -DSOCI_SQLITE3=ON
+          -DSOCI_DB2=OFF
+          -DSOCI_FIREBIRD=OFF
+          -DSOCI_ORACLE=OFF
+          -DSOCI_POSTGRESQL=OFF
+          -DSOCI_ODBC=OFF
+          -DSOCI_MYSQL=OFF
 
       - name: Build
         run: cmake --build "${BUILD_DIR}" --config Release -j2
-
-      - name: Test
-        run: ctest --output-on-failure -C Release --test-dir "${BUILD_DIR}"
 
       # --- Produce full & stripped bundles for Ghidra ---
       - name: Package (full + stripped + symbols)
@@ -82,11 +71,13 @@ jobs:
           # Headers
           [ -d include ] && cp -R include/ out/full/include/ || true
 
-          # Libraries (static)
-          cp -f "${BUILD_DIR}"/libSQLiteCpp*.a out/full/lib/ 2>/dev/null || true
-          find "${BUILD_DIR}" -maxdepth 3 -type f -name 'libSQLiteCpp*.a' -not -path '*/CMakeFiles/*' -exec cp -f {} out/full/lib/ \; || true
+          # Libraries (static/dynamic) - SOCI names typically start with 'soci'
+          find "${BUILD_DIR}" -maxdepth 4 -type f -name 'libsoci*.a'    -exec cp -f {} out/full/lib/ \; || true
+          find "${BUILD_DIR}" -maxdepth 4 -type f -name 'libsoci*.dll.a' -exec cp -f {} out/full/lib/ \; || true
+          find "${BUILD_DIR}" -maxdepth 4 -type f -name 'soci*.dll'      -exec cp -f {} out/full/lib/ \; || true
+          find "${BUILD_DIR}" -maxdepth 4 -type f -name 'soci*.lib'      -exec cp -f {} out/full/lib/ \; || true
 
-          # Binaries (examples/tests)
+          # Binaries: examples/tools if any
           find "${BUILD_DIR}" -type f \( -iname '*.exe' -o -iname '*.dll' \) -not -path '*/CMakeFiles/*' -exec cp -f {} out/full/bin/ \; || true
 
           # Stripped copies start from full
@@ -98,10 +89,13 @@ jobs:
 
           # Strip EXE/DLL & create separate .debug files (GNU style)
           shopt -s nullglob
-          for f in out/stripped/bin/*.exe out/stripped/bin/*.dll; do
+          for f in out/stripped/bin/*.exe out/stripped/bin/*.dll out/stripped/lib/*.dll; do
             base="$(basename "$f")"
+            # Prefer unstripped twin from 'full' to harvest symbols
             if [ -f "out/full/bin/$base" ]; then
               objcopy --only-keep-debug "out/full/bin/$base" "out/symbols/$base.debug" || true
+            elif [ -f "out/full/lib/$base" ]; then
+              objcopy --only-keep-debug "out/full/lib/$base" "out/symbols/$base.debug" || true
             else
               objcopy --only-keep-debug "$f" "out/symbols/$base.debug" || true
             fi
@@ -139,7 +133,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      # --- Auto-commit compile_commands.json (kept) ---
+      # --- Auto-commit compile_commands.json ---
       - name: Commit compile_commands.json into repo
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/')
         shell: pwsh
@@ -175,7 +169,7 @@ jobs:
 
           exit 0
 
-      # --- NEW: load org/key from sonar-project.properties so v6 doesn't override with empty values ---
+      # Read org/key from sonar-project.properties so the action doesn't pass empty values
       - name: Load Sonar org/key from sonar-project.properties
         if: env.SONAR_ORGANIZATION == '' || env.SONAR_PROJECT_KEY == ''
         shell: pwsh
@@ -193,7 +187,6 @@ jobs:
           "SONAR_ORGANIZATION=$org" | Out-File -FilePath $env:GITHUB_ENV -Append
           "SONAR_PROJECT_KEY=$key"  | Out-File -FilePath $env:GITHUB_ENV -Append
 
-      # SonarCloud scan (reads org/key from env set above)
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v6
         env:
@@ -204,6 +197,6 @@ jobs:
         with:
           args: >
             --define sonar.sources=.
-            --define sonar.exclusions=**/tests/**,**/.scannerwork/**,**/build/**,**/scripts/**,**/cmake-build-**/
+            --define sonar.exclusions=**/.scannerwork/**,**/build/**,**/scripts/**,**/cmake-build-**/**
             --define sonar.cfamily.compile-commands=build/compile_commands.json
             --define sonar.verbose=true
